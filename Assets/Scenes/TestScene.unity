@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ViewCone
       objectReference: {fileID: 0}
+    - target: {fileID: 4725180960986269101, guid: 979413e4232bf11478287d9a382bc31b, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 1264975111}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4279,6 +4283,11 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: f801b1bc304e0034d8439a351e5b21b2, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &1264975111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1429065979104508675, guid: ee9fb2e8130a8a9469e52abfa21ce3d2, type: 3}
+  m_PrefabInstance: {fileID: 938243338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1264975116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2405226016971955950, guid: ee9fb2e8130a8a9469e52abfa21ce3d2, type: 3}
