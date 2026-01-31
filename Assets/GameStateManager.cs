@@ -12,9 +12,8 @@ public class GameStateManager : MonoBehaviour
 	[Header("References")]
 	public LevelSelect LevelSelect;
 	public LoadingManager loadingManager;
-	[Header("Status")]
+	//[Header("Status")]
 
-	public Level currentLevel;
 
 	private void Awake()
 	{
@@ -68,7 +67,12 @@ public class GameStateManager : MonoBehaviour
 			    break;
 	    }
     }
-    
+
+    public void RestartLevel()
+    {
+	    loadingManager.LoadLevel(LevelSelect.selectedLevel);
+    }
+
 
     public void QuitGame()
     {
