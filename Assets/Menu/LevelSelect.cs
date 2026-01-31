@@ -13,6 +13,8 @@ public class LevelSelect : MonoBehaviour
 
 	public Image previewImage;
 	public TextMeshProUGUI levelName;
+	[Header("status")]
+	public Level selectedLevel;
 
     void Start()
     {
@@ -34,7 +36,7 @@ public class LevelSelect : MonoBehaviour
     
     void OnLevelSelected(int index)
     {
-	    Level selectedLevel = availableLevels[index];
+	    selectedLevel = availableLevels[index];
 	    //change the preview to reflect the level
 	    previewImage.sprite = selectedLevel.levelPreviewImage;
 	    levelName.text = selectedLevel.levelName;
