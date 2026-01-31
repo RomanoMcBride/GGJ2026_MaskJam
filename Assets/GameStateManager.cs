@@ -7,13 +7,16 @@ public class GameStateManager : MonoBehaviour
 	public GameState mainMenu;
 	public GameState game;
 	public GameState paused;
+	public GameState levelCompleted;
+	public GameState gameOver;
 	
 	private GameState currentState;
 	[Header("References")]
 	public LevelSelect LevelSelect;
 	public LoadingManager loadingManager;
 	//[Header("Status")]
-
+	private float levelStartTime;
+	private float levelCompletionTime;
 
 	private void Awake()
 	{
@@ -61,6 +64,12 @@ public class GameStateManager : MonoBehaviour
 			    break;
 		    case "paused":
 			    ChangeState(paused);
+			    break;
+		    case "levelCompleted":
+			    ChangeState(levelCompleted);
+			    break;
+		    case "gameOver":
+			    ChangeState(gameOver);
 			    break;
 		    default:
 			    ChangeState(mainMenu);
