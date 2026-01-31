@@ -15,4 +15,4 @@ MonoBehaviour:
   levelName: the beginning
   levelID: f63bf5ea-67a1-468a-b73d-7159c877e86b
   levelFileName: level0
-  levelPreviewImage: {fileID: 2800000, guid: f8455ce1af8804e05a5ec9c21702c300, type: 3}
+  levelPreviewImage: {fileID: 21300000, guid: f8455ce1af8804e05a5ec9c21702c300, type: 3}
