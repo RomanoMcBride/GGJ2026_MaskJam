@@ -6,12 +6,20 @@ using System.Collections.Generic;
 
 public class LevelSelect : MonoBehaviour
 {
+	[Header("settings")]
 	public Level[] availableLevels;
+	[Header("references")]
 	public TMP_Dropdown dropdown;
+
+	public Image previewImage;
+	public TextMeshProUGUI levelName;
+	[Header("status")]
+	public Level selectedLevel;
+
     void Start()
     {
 	    dropdown.ClearOptions();
-	    //update the level list
+	    // Update the level list
 		List<string> levelNames = new List<string>();
 		foreach (Level level in availableLevels)
 		{
@@ -22,13 +30,16 @@ public class LevelSelect : MonoBehaviour
 	    dropdown.AddOptions(levelNames);
 	    
 	    dropdown.onValueChanged.AddListener(OnLevelSelected);
-
+		// Select the first level
+		OnLevelSelected(0);
     }
     
     void OnLevelSelected(int index)
     {
-	    Level selectedLevel = availableLevels[index];
-	    Debug.Log($"Selected level: {selectedLevel.levelName} (ID: {selectedLevel.levelID})");
+	    selectedLevel = availableLevels[index];
+	    //change the preview to reflect the level
+	    previewImage.sprite = selectedLevel.levelPreviewImage;
+	    levelName.text = selectedLevel.levelName;
     }
 
     void OnDestroy()

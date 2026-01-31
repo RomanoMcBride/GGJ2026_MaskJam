@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class GameStateManager : MonoBehaviour
 	public GameState paused;
 	
 	private GameState currentState;
+	[Header("References")]
+	public LevelSelect LevelSelect;
+	public LoadingManager loadingManager;
+	//[Header("Status")]
+
 
 	private void Awake()
 	{
@@ -34,6 +40,11 @@ public class GameStateManager : MonoBehaviour
 	    if (newState.menu)
 	    {
 		    newState.menu.SetActive(true);
+		    if (currentState.menu == mainMenu.menu && newState.menu == game.menu)
+		    {
+				//start level
+				loadingManager.LoadLevel(LevelSelect.selectedLevel);
+		    }
 		    currentState = newState;
 	    }
     }
@@ -56,11 +67,12 @@ public class GameStateManager : MonoBehaviour
 			    break;
 	    }
     }
-    
-    void LoadLevel()
+
+    public void RestartLevel()
     {
-	    
+	    loadingManager.LoadLevel(LevelSelect.selectedLevel);
     }
+
 
     public void QuitGame()
     {
