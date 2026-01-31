@@ -1000,6 +1000,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerStart
       objectReference: {fileID: 0}
+    - target: {fileID: 7067990700109529289, guid: bd30d1dbe257342d2a6140434543ed4f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4317
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067990700109529289, guid: bd30d1dbe257342d2a6140434543ed4f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.53
+      objectReference: {fileID: 0}
     - target: {fileID: 7685712940100649934, guid: bd30d1dbe257342d2a6140434543ed4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.64
