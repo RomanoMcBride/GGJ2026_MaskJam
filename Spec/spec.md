@@ -1,12 +1,12 @@
-- [ ] player can move
-- [ ] agents walk around randomly
+- [x] player can move
+- [x] agents walk around randomly
 - [ ] agents start following player if player is in view for too long
 - [ ] game over if agent catches player
 - [ ] each agent can be of a certain type
 - [ ] player can pick up a mask to imitate agents of a certain type and won't be chased by those agents
 - [ ] mask types have different looks
 - [ ] a place where the player needs to go to complete the level
-- [ ] level selection
+- [x] level selection
 - [ ] game over screen (with restart button)
 - [ ] level complete screen (with next level and main menu button)
 - [ ] pause menu
