@@ -6,12 +6,10 @@
     public class MoveToClickPoint : MonoBehaviour {
         NavMeshAgent agent;
         public GameObject player;
-        public float minRadius = 10;
-        public float maxRadius = 100;
-        public float waitTime = 10f;
-        public bool following = false;
         private float timeLeft = 10f;
+        public float waitTime = 10f;
         public float maxSight = 10f;
+        private bool following = false;
 
         private Ray[] feildOfView;
 
@@ -20,12 +18,18 @@
         void Start() {
             agent = GetComponent<NavMeshAgent>();
             player = GameObject.Find("Player");
-            createTargetDestination();
+            targetDestination = transform.position;
         }
 
         void Update()
     {
-        
+        if(following){
+            followPlayer();
+        }else
+        {
+            randomMovement();
+        }
+        agent.SetDestination(targetDestination);
         
     }
     void FixedUpdate()
@@ -39,6 +43,7 @@
                 {
                     print("Player Spotted");
                     following = true;
+                    break;
                 } else {
                     print("No Player: " + hit.collider.gameObject.name);
                 }
@@ -47,12 +52,12 @@
         }
     }
 
-    void OnDrawGizmos()
-        {
-            // Draw a yellow sphere at the transform's position
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(transform.position, transform.position + transform.forward * maxSight);
-        }
+    // void OnDrawGizmos()
+    //     {
+    //         // Draw a yellow sphere at the transform's position
+    //         Gizmos.color = Color.yellow;
+    //         Gizmos.DrawLine(transform.position, transform.position + transform.forward * maxSight);
+    //     }
 
     void randomMovement()
     {
@@ -60,16 +65,22 @@
 
         if (timeLeft <= 0.0f)
         {
-            createTargetDestination();
+            targetDestination = new Vector3(Random.Range(-10f, 10f), 0, Random.Range(-10f, 10f));
             timeLeft = waitTime;
         }
     }
-    void createTargetDestination()
+
+    void directedRandomWonder(float minRadius, float maxRadius)
     {
-        // Mathf.random()  
-        //targetDestination = player.transform.position + new Vector3(xOffset, 0, zOffset);
+        float radius = Random.Range(minRadius, maxRadius);
+        float angle = Random.Range(0, 2 * Mathf.PI);
+        float xOffset = radius * Mathf.Cos(angle);
+        float zOffset = radius * Mathf.Sin(angle);
+        targetDestination = player.transform.position + new Vector3(xOffset, 0, zOffset);
+
     }
-        void followPlayer()
+
+    void followPlayer()
     {
         targetDestination = player.transform.position;
     }
