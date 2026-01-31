@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e2d0cdd6-2879-4864-afd0-27f04696b6cb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/LevelExit.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/LevelExit.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/LevelExit/LevelExit Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/LevelExit/LevelExit Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelExit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelExit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/LoadingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/LoadingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/level0/level0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/level0/level0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/level0/level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/level0/level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/level1/level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/level1/level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spec/spec.md" beforeDir="false" afterPath="$PROJECT_DIR$/Spec/spec.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelExit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelExit.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +16,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/CamFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Utilities/GoToMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
@@ -92,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769877054762</updated>
-      <workItem from="1769877056251" duration="16029000" />
+      <workItem from="1769877056251" duration="17641000" />
     </task>
     <servers />
   </component>

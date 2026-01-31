@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/level1/level1.unity
     guid: b7c199d86769a41dda0c62181bf7270c
+  - enabled: 1
+    path: Assets/Levels/Credits/credits.unity
+    guid: c5f96d26e9a89479e811b0a5dee9786b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
