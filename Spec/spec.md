@@ -5,8 +5,8 @@
 - [ ] each agent can be of a certain type
 - [ ] player can pick up a mask to imitate agents of a certain type and won't be chased by those agents
 - [ ] mask types have different looks
-- [ ] a place where the player needs to go to complete the level
+- [x] a place where the player needs to go to complete the level
 - [x] level selection
-- [ ] game over screen (with restart button)
-- [ ] level complete screen (with next level and main menu button)
-- [ ] pause menu
+- [x] game over screen (with restart button)
+- [x] level complete screen (with next level and main menu button)
+- [x] pause menu
