@@ -7,9 +7,11 @@ public class LoadingManager : MonoBehaviour
 {
     public GameObject loadingScreen;
     public Slider progressBar;
+    public Level currentLevel;
 
     public void LoadLevel(Level level)
     {
+	    currentLevel = level;
         StartCoroutine(LoadAsynchronously(level.levelFileName));
         
     }

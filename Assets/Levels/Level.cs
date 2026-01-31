@@ -7,4 +7,5 @@ public class Level : ScriptableObject
 	public string levelID;
 	public string levelFileName;
 	public Sprite levelPreviewImage;
+	public Level nextLevel;
 }

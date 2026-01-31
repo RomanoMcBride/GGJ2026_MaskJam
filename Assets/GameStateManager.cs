@@ -28,12 +28,15 @@ public class GameStateManager : MonoBehaviour
 	    currentState = mainMenu; //default is main menu
 	    game.menu.SetActive(false);
 	    paused.menu.SetActive(false);
+		levelCompleted.menu.SetActive(false);
+		gameOver.menu.SetActive(false);
     }
 
 
     public void ChangeState(GameState newState)
     {
-	    Debug.Log(newState.menu.ToString());
+	    Time.timeScale = newState.gameSpeed;
+	    Debug.Log("changing state:"+ newState.menu.ToString());
 	    if (currentState.menu)
 	    {
 		    Debug.Log("disabling" +  currentState.menu);
@@ -72,6 +75,7 @@ public class GameStateManager : MonoBehaviour
 			    ChangeState(gameOver);
 			    break;
 		    default:
+			    Debug.LogWarning("unknown state. going to main menu");
 			    ChangeState(mainMenu);
 			    break;
 	    }
@@ -79,7 +83,14 @@ public class GameStateManager : MonoBehaviour
 
     public void RestartLevel()
     {
+	    ChangeState(game);
 	    loadingManager.LoadLevel(LevelSelect.selectedLevel);
+    }
+    
+    public void LoadNextLevel()
+    {
+	    ChangeState(game);
+	    loadingManager.LoadLevel(loadingManager.currentLevel.nextLevel);
     }
 
 
@@ -93,4 +104,5 @@ public class GameStateManager : MonoBehaviour
 public struct GameState
 {
 	public GameObject menu;
+	public float gameSpeed; //the speed at this state
 }

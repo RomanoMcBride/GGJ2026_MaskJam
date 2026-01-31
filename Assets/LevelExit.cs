@@ -16,7 +16,7 @@ public class LevelExit : MonoBehaviour
 	    {
 		    if (other.gameObject.name == "Player")
 		    {
-			    stateManager.ChangeState("levelCompleted!");
+			    stateManager.ChangeState("levelCompleted");
 		    }
 	    }
 	    else
