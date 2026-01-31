@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2d0cdd6-2879-4864-afd0-27f04696b6cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Agent.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Agent.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Agents/Agent.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Agent.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Agents/Agent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Agent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceAssets/Agent.jas" beforeDir="false" afterPath="$PROJECT_DIR$/SourceAssets/Agent.jas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/level1/level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/level1/level1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769877054762</updated>
-      <workItem from="1769877056251" duration="9546000" />
+      <workItem from="1769877056251" duration="11248000" />
     </task>
     <servers />
   </component>
