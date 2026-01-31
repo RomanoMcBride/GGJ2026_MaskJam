@@ -147,7 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  minRadius: 10
-  maxRadius: 100
   waitTime: 10
-  following: 0
+  maxSight: 10
