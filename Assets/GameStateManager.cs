@@ -61,6 +61,11 @@ public class GameStateManager : MonoBehaviour
     {
 	    
     }
+
+    public void QuitGame()
+    {
+	    Application.Quit();
+    }
 }
 
 [System.Serializable]
