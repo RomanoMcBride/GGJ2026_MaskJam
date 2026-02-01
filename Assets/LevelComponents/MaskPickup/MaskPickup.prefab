@@ -148,11 +148,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 24f4ca46bdcbd4c1983bea1fc8c86667, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: a17d1d32c79764d0da7784aa452b0822, type: 2}
     - target: {fileID: -7511558181221131132, guid: 24f4ca46bdcbd4c1983bea1fc8c86667, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: 269a993c1e02f4c8f986bf10366f2a73, type: 2}
     - target: {fileID: 919132149155446097, guid: 24f4ca46bdcbd4c1983bea1fc8c86667, type: 3}
       propertyPath: m_Name
       value: PickupBase
@@ -244,7 +244,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 63ca854d6571c498c99bfe1dd247bcf7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: aae966bc19e1a4bebbd3d14f4a0db9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 63ca854d6571c498c99bfe1dd247bcf7, type: 3}
       propertyPath: m_Name
       value: Mask

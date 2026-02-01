@@ -27,7 +27,7 @@ public class MaskPickup : MonoBehaviour
 		else
 		{
 			UpdateMaskVisuals();
-			MakeMaskAvailable();
+			MakeMaskUnavailable();
 		}
 		
 	}
@@ -36,11 +36,17 @@ public class MaskPickup : MonoBehaviour
 	{
 		if (!hasMaskAvailable)
 		{
+			
 			if (Time.time - lastPickupTime > respawnTime)
 			{
 				MakeMaskAvailable();
 			}
+			else
+			{
+				pickupBase.SetFill((Time.time - lastPickupTime)/respawnTime);
+			}
 		}
+
 	}
 
 	void MakeMaskAvailable()
@@ -51,11 +57,11 @@ public class MaskPickup : MonoBehaviour
 	
 	void MakeMaskUnavailable()
 	{
+		lastPickupTime = Time.time;
 		hasMaskAvailable = false;
 		animator.SetBool("hasMask", false);
 
 	}
-
 	
 	private void OnValidate()
 	{
@@ -84,7 +90,6 @@ public class MaskPickup : MonoBehaviour
 		    if (other.name == "Player")
 		    {
 			    PlayerState ps = other.GetComponent<PlayerState>();
-			    lastPickupTime = Time.time;
 			    ps.PickUpMask(maskType);
 			    MakeMaskUnavailable();
 		    }
