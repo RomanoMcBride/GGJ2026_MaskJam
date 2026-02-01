@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1009246545312075530}
   - component: {fileID: 3828743842717944307}
   - component: {fileID: 158251282984098212}
+  - component: {fileID: 6212594950923716712}
   m_Layer: 0
   m_Name: MaskPickup
   m_TagString: Untagged
@@ -73,6 +74,29 @@ MonoBehaviour:
   mask: {fileID: 2551430122929260513}
   maskObject: {fileID: 8271425949265097926}
   pickupBase: {fileID: 2552205386495225526}
+  animator: {fileID: 6212594950923716712}
+--- !u!95 &6212594950923716712
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3423392629417434943}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1020c2a9da93e40e19159fa0042090e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &6796990252478458954
 PrefabInstance:
   m_ObjectHideFlags: 0

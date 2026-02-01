@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickupBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickupBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickupMask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelComponents/MaskPickup/MaskPickupMask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/level1/level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/level1/level1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769877054762</updated>
       <workItem from="1769877056251" duration="17641000" />
-      <workItem from="1769963294617" duration="5423000" />
+      <workItem from="1769963294617" duration="6612000" />
     </task>
     <servers />
   </component>
