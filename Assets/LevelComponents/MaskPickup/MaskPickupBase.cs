@@ -18,18 +18,12 @@ public class MaskPickupBase : MonoBehaviour
     {
 	    Material[] materials;
 		#if UNITY_EDITOR
+
 	    if (!Application.isPlaying)
 	    {
-		    materials = meshRenderer.sharedMaterials;
-
-		    if (materials[1])
-		    {
-			    materials[1].color = color;
-		    }
-
-		    meshRenderer.sharedMaterials = materials;
 		    return;
 	    }
+
 		#endif
 	    
 	    materials = meshRenderer.materials;

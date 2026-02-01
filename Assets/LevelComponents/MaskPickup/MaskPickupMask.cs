@@ -10,15 +10,8 @@ public class MaskPickupMask : MonoBehaviour
 		#if UNITY_EDITOR
 		if (!Application.isPlaying)
 		{
-			materials = meshRenderer.sharedMaterials;
-
-			if (materials[0])
-			{
-				materials[0].color = color;
-			}
-
-			meshRenderer.sharedMaterials = materials;
 			return;
+			
 		}
 		#endif
 		
