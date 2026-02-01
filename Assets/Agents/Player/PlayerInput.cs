@@ -10,13 +10,15 @@ public class PlayerInput : MonoBehaviour
     private float gravityValue = -9.81f;
 
     public CharacterController controller;
-    private Vector3 playerVelocity;
+    public Vector3 playerVelocity;
     private bool groundedPlayer;
 
     [Header("Input Actions")]
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
     public Animator nakedPlayerAnimator;
+
+    public Vector3 move;
 
     private void Start()
     {
@@ -48,7 +50,7 @@ public class PlayerInput : MonoBehaviour
         // Read input
         Vector2 input = moveAction.action.ReadValue<Vector2>();
         //Debug.Log(input.x);
-        Vector3 move = new Vector3(input.x, 0, input.y);
+	    move = new Vector3(input.x, 0, input.y);
         move = Vector3.ClampMagnitude(move, 1f);
 
         if (move != Vector3.zero){
