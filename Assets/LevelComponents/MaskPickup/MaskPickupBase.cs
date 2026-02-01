@@ -15,8 +15,25 @@ public class MaskPickupBase : MonoBehaviour
 
     public void SetColor(Color color)
     {
-	    Material[] materials = meshRenderer.materials;
+	    Material[] materials;
+		#if UNITY_EDITOR
+	    if (!Application.isPlaying)
+	    {
+		    materials = meshRenderer.sharedMaterials;
 
+		    if (materials[1])
+		    {
+			    materials[1].color = color;
+		    }
+
+		    meshRenderer.sharedMaterials = materials;
+		    return;
+	    }
+		#endif
+	    
+	    materials = meshRenderer.materials;
+
+	    
 	    materials[1].color = color;
 
 	    meshRenderer.materials = materials;
