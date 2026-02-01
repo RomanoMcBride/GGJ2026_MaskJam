@@ -2286,6 +2286,8 @@ MonoBehaviour:
   availableLevels:
   - {fileID: 11400000, guid: 9dd1843e007814fd282785d5128f55f7, type: 2}
   - {fileID: 11400000, guid: d872653531ef949abbeb48ef76681d11, type: 2}
+  - {fileID: 11400000, guid: a337b039eb549458bb7551616d423118, type: 2}
+  - {fileID: 11400000, guid: ce800996ef5454d4ea423da7346c6b85, type: 2}
   dropdown: {fileID: 587033894}
   previewImage: {fileID: 635807985}
   levelName: {fileID: 900763137}
@@ -6094,7 +6096,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 437345684}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.68
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
