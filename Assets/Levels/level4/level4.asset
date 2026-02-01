@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d560e7369fdf45d6a323172714b1109, type: 3}
+  m_Name: level4
+  m_EditorClassIdentifier: 
+  levelName: ultra
+  levelID: 993211d3-6e8b-4833-b28d-f2950478c58c
+  levelFileName: level4
+  levelPreviewImage: {fileID: 0}
+  nextLevel: {fileID: 11400000, guid: 317a5420356ca4e8f93c1db054499581, type: 2}
