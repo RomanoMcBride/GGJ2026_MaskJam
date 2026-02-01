@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d560e7369fdf45d6a323172714b1109, type: 3}
-  m_Name: level2
+  m_Name: level3
   m_EditorClassIdentifier: 
-  levelName: sir levlington the third
-  levelID: 4c639e62-d146-47ac-bee3-77fa8f95fdd2
-  levelFileName: level2
-  levelPreviewImage: {fileID: 0}
-  nextLevel: {fileID: 11400000, guid: ce800996ef5454d4ea423da7346c6b85, type: 2}
+  levelName: ruins
+  levelID: de256333-f2ea-458d-856b-f6b2c31f66b6
+  levelFileName: level3
+  levelPreviewImage: {fileID: 21300000, guid: 883971792f307d64eacb27ab59ee30f8, type: 3}
+  nextLevel: {fileID: 11400000, guid: 317a5420356ca4e8f93c1db054499581, type: 2}
