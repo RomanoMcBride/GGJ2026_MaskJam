@@ -7,7 +7,6 @@ public class PlayerState : MonoBehaviour
 	public SkinnedMeshRenderer maskMeshRenderer;
 	public GameObject nakedPlayer;
 	public GameObject maskedPlayer;
-	private Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,8 +18,8 @@ public class PlayerState : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
+    { 
+		
     }
     
 
