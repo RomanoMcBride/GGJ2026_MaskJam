@@ -15,11 +15,27 @@
         private float surprisedSpeed = 3f;
         private float chaseSpeed = 4f;
 
+        public MaskType agentMaskType;
+
         private Vector3 targetDestination;
 
         void Start() {
-            player = GameObject.FindGameObjectsWithTag("Player")[0];
+            try
+            {
+                player = GameObject.FindGameObjectsWithTag("Player")[0];
+            }
+            catch
+            {
+                player = GameObject.Find("Player");
+            }
+        
             agent = GetComponent<NavMeshAgent>();
+
+            Color agentColor = agentMaskType.maskColor;
+            Material[] materials = GetComponentInChildren<SkinnedMeshRenderer>().materials;
+            materials[0].color = agentColor;
+            GetComponentInChildren<SkinnedMeshRenderer>().materials = materials;
+
         }
 
     void FixedUpdate()
@@ -27,7 +43,7 @@
         timeLeft -= Time.fixedDeltaTime;
         if (timeLeft <= 0)
         {   
-            timeLeft = Random.Range(3, 7);
+            timeLeft = Random.Range(7, 10);
             state = (state > 0) ? state - 1 : 0;
             switch (state)
             {
@@ -51,8 +67,6 @@
             agent.speed = chaseSpeed;
         }
 
-        //Set Animation Stuff Here
-        print(agent.velocity.magnitude);
         if (targetDestination == transform.position && agent.velocity.magnitude < 0.1f)
         {
             animator.SetFloat("speed", 0);
@@ -96,7 +110,7 @@
         RaycastHit hit;
         if(Physics.Raycast(transform.position, direction, out hit, Vector3.Distance(transform.position, player.transform.position)))
         {
-            Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
+            // Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
             if(hit.collider.gameObject == player)
             {
                 return true;
@@ -107,19 +121,19 @@
 
     public bool differentColor()
     {
-        Color agentColor = GetComponent<Renderer>().material.color;
-        Color playerColor = player.GetComponent<Renderer>().material.color;
-        return agentColor != playerColor;
+        MaskType playerMaskType = player.GetComponent<PlayerState>().currentMaskType;
+        return playerMaskType != agentMaskType;
     }
 
     public void stopIdle(float proportion)
     {
         if (proportion < 0.15f)
         {
-            // Caught the player
+            GameStateManager m =  FindFirstObjectByType<GameStateManager>();
+		    m.ChangeState("gameOver");
             return;
         }
-        if (notBehindWall())
+        if (notBehindWall() && differentColor())
         {
             switch (proportion)
             {
