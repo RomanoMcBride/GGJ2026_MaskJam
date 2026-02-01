@@ -25,7 +25,7 @@ public class CamFollow : MonoBehaviour
 	    Vector3 targetPosition = player.transform.position + p.move * camMovementOffset;
 	    //Debug.Log("move offset: " + p.move.ToString());
         float distanceToTarget = Mathf.Clamp(Vector3.Distance(transform.position, targetPosition), 0, maxDistanceMultiplier);
-        Debug.Log("distance to target " + distanceToTarget);
+        //Debug.Log("distance to target " + distanceToTarget);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, cameraAdjustmentSpeed * distanceToTarget * Time.deltaTime) ;
     }
 }

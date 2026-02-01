@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2d0cdd6-2879-4864-afd0-27f04696b6cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ2026_MaskJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Agents/Player/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Agents/Player/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CamFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CamFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComponents/FollowCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelComponents/FollowCamera.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="e2d0cdd6-2879-4864-afd0-27f04696b6cb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769877054762</updated>
       <workItem from="1769877056251" duration="17641000" />
-      <workItem from="1769963294617" duration="13921000" />
+      <workItem from="1769963294617" duration="14692000" />
     </task>
     <servers />
   </component>
