@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class MaskPickupBase : MonoBehaviour
 {
-	private MeshRenderer meshRenderer;
+	public MeshRenderer meshRenderer;
     void Start()
     {
 	    meshRenderer = GetComponent<MeshRenderer>();

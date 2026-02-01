@@ -7,6 +7,7 @@ public class MaskPickup : MonoBehaviour
 	[Header("references")]
 	public MaskPickupMask mask;
 	public MaskPickupBase pickupBase;
+	private MeshRenderer meshRenderer;
 	
 	private void Start()
 	{

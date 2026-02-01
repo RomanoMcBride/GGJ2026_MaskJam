@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wearingMask: 0
   currentMaskType: {fileID: 0}
+  maskMeshRenderer: {fileID: 2953773987659952564}
 --- !u!1001 &4493561816079953126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,6 +193,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad2d1d86bcd0342709ea85439fe2214c, type: 3}
+--- !u!137 &2953773987659952564 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1630794972795428178, guid: ad2d1d86bcd0342709ea85439fe2214c, type: 3}
+  m_PrefabInstance: {fileID: 4493561816079953126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4167782201423366925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad2d1d86bcd0342709ea85439fe2214c, type: 3}

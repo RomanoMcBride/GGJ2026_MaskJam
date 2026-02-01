@@ -4,6 +4,8 @@ public class PlayerState : MonoBehaviour
 {
 	public bool wearingMask;
 	public MaskType currentMaskType;
+	public SkinnedMeshRenderer maskMeshRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,5 +23,12 @@ public class PlayerState : MonoBehaviour
     {
 	    Debug.Log("Picking up mask: " + maskType );
 	    currentMaskType = maskType;
+	    //change color of mask
+	    Material[] materials = maskMeshRenderer.materials;
+
+	    materials[1].color = maskType.maskColor;
+	    
+	    maskMeshRenderer.materials = materials;
+	    
     }
 }
