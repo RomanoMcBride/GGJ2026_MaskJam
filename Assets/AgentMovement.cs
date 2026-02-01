@@ -8,7 +8,7 @@
         public GameObject player;
         public float maxSight = 10f;
         private int state = 0;
-        public float followRadius = 20f;
+        public float followRadius = 10f;
         private Ray[] feildOfView;
         private float timeLeft = 0f;
 
@@ -35,7 +35,7 @@
         {
             targetDestination = player.transform.position;
         }
-        //agent.SetDestination(targetDestination);
+        agent.SetDestination(targetDestination);
     }
 
     Vector3 directedRandomWonder()
@@ -51,35 +51,39 @@
 
     public bool notBehindWall()
     {
-        RaycastHit hit;
-        Vector3 forwardDir = (transform.forward / transform.localScale.magnitude);
-        for(int deg = -50; deg <= 50; deg += 1){
-            Vector3 direction = Quaternion.Euler(0, deg, 0) * forwardDir;
-            if(Physics.Raycast(transform.position, direction, out hit, maxSight) && hit.collider.gameObject == player){
-                return true;
-            }
-        }
-        return false;
+        // RaycastHit hit;
+        // Vector3 forwardDir = (transform.forward / transform.localScale.magnitude);
+        // for(int deg = -50; deg <= 50; deg += 1){
+        //     Vector3 direction = Quaternion.Euler(0, deg, 0) * forwardDir;
+        //     if(Physics.Raycast(transform.position, direction, out hit, maxSight) && hit.collider.gameObject == player){
+        //         return true;
+        //     }
+        // }
+        return true;
     }
 
     public void stopIdle(float proportion)
     {
-        print("Proportion: " + proportion);
         if (notBehindWall())
         {
-            if (proportion < 0.5f)
+            switch (proportion)
             {
-                state = 2;
-            }
-            else
-            {
-                state = 1;
+                case float p when (p > 0.85f):
+                    state = 1;
+                    break;
+                case float p when (p <= 0.85f && p >= 0.15f):
+                    state = 2;
+                    break;
+                case float p when (p < 0.15f):
+                    state = 3;
+                    break;
             }
         }
         else
         {
             state = 0;
         }
-        print("State: " + state);
+        print(state);
     }
+    
 }
