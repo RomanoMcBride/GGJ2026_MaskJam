@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7088966626346691028}
   - component: {fileID: 774215376925178643}
   - component: {fileID: 7188420158639178601}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: viewConeAgent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6049e74e2c8ba48b14fe9114434447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 6776671079452672129}
   player: {fileID: 0}
-  maxSight: 10
   followRadius: 20
 --- !u!1001 &506120066677787822
 PrefabInstance:
@@ -292,9 +292,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6484789626168269238, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4818485038740842366, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3310827121996351767, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1511959532111144498, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 635547659545568360, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
       propertyPath: m_Name
       value: Agent
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375920299915204463, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320890496196787754, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468294370211052142, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657560127643677590, guid: b1d1f36a83d6e45fba742988244123a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
