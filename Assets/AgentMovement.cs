@@ -22,19 +22,44 @@
 
     void FixedUpdate()
     {
-        if (state == 0 || state == 1)
-        {
-            timeLeft -= Time.fixedDeltaTime;
+        timeLeft -= Time.fixedDeltaTime;
             if (timeLeft <= 0)
-            {
+            {   
+                switch (state)
+                {
+                    case 0:
+                        NavMeshHit hit;
+                        Vector3 randomDirection = new Vector3(Random.Range(-25f, 25f), 0, Random.Range(-25f, 25f));
+                        NavMesh.SamplePosition(randomDirection, out hit, 100, NavMesh.AllAreas);
+                        targetDestination = hit.position;
+                        break;
+                    case 1:
+                        NavMeshHit hit2;
+                        NavMesh.SamplePosition(directedRandomWonder(), out hit2, 100, NavMesh.AllAreas);
+                        targetDestination = hit2.position;
+                        break;
+                        }
                 timeLeft = Random.Range(5f, 10f);
-                targetDestination = (state == 0) ? new Vector3(Random.Range(-100f, 100f), 0, Random.Range(-100f, 100f)) : directedRandomWonder();
+                state = (state > 0) ? state - 1 : 0;
             }
-        }
-        else
-        {
-            targetDestination = player.transform.position;
-        }
+
+            switch (state)
+                {
+                    case 2:
+                        targetDestination = player.transform.position;
+                        break;
+                    case 3:
+                        break;
+                }
+
+            // print(  state);
+
+            //Set Animation Stuff Here
+
+
+
+
+
         agent.SetDestination(targetDestination);
     }
 
@@ -51,15 +76,26 @@
 
     public bool notBehindWall()
     {
-        // RaycastHit hit;
-        // Vector3 forwardDir = (transform.forward / transform.localScale.magnitude);
-        // for(int deg = -50; deg <= 50; deg += 1){
-        //     Vector3 direction = Quaternion.Euler(0, deg, 0) * forwardDir;
-        //     if(Physics.Raycast(transform.position, direction, out hit, maxSight) && hit.collider.gameObject == player){
-        //         return true;
-        //     }
-        // }
-        return true;
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        RaycastHit hit;
+        LayerMask mask = LayerMask.GetMask("ViewCone", "Agent");
+        if(Physics.Raycast(transform.position, direction, out hit, Vector3.Distance(transform.position, player.transform.position), ~mask))
+        {
+            Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
+            print(hit.collider.gameObject.name);
+            if(hit.collider.gameObject == player)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool differentColor()
+    {
+        Color agentColor = GetComponent<Renderer>().material.color;
+        Color playerColor = player.GetComponent<Renderer>().material.color;
+        return agentColor != playerColor;
     }
 
     public void stopIdle(float proportion)
@@ -83,7 +119,6 @@
         {
             state = 0;
         }
-        print(state);
     }
     
 }
