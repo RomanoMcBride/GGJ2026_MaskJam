@@ -17,7 +17,6 @@ public class PlayerInput : MonoBehaviour
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
     public Animator nakedPlayerAnimator;
-    public Animator maskedPlayerAnimator;
 
     private void Start()
     {
@@ -55,6 +54,7 @@ public class PlayerInput : MonoBehaviour
         if (move != Vector3.zero){
             transform.forward = move;
         }
+        nakedPlayerAnimator.SetFloat("speed", move.magnitude);
 
 
         // Jump using WasPressedThisFrame()
@@ -69,18 +69,5 @@ public class PlayerInput : MonoBehaviour
         // Move
         Vector3 finalMove = move * playerSpeed + Vector3.up * playerVelocity.y;
         controller.Move(finalMove * Time.deltaTime);
-        try
-        {
-            nakedPlayerAnimator.SetFloat("speed", finalMove.magnitude);
-            
-        }
-        catch{}
-
-        try
-        {
-            maskedPlayerAnimator.SetFloat("speed", finalMove.magnitude);
-        }
-        catch{}
-        
     }
 }
