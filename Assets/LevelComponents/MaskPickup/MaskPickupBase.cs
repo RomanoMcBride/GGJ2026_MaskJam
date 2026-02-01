@@ -6,7 +6,7 @@ public class MaskPickupBase : MonoBehaviour
 	public MeshRenderer meshRenderer;
     public void SetFill(float fillValue)
     {
-	    Debug.Log("setting fill to" +  fillValue);
+	    //Debug.Log("setting fill to" +  fillValue);
 	    Material[] materials = meshRenderer.materials;
 
 	    materials[1].SetFloat("_Fill", fillValue);
