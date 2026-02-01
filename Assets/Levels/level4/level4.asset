@@ -15,5 +15,5 @@ MonoBehaviour:
   levelName: ultra
   levelID: 993211d3-6e8b-4833-b28d-f2950478c58c
   levelFileName: level4
-  levelPreviewImage: {fileID: 0}
+  levelPreviewImage: {fileID: 21300000, guid: 2abb048f5e5c042f2a4572ff7db20d42, type: 3}
   nextLevel: {fileID: 11400000, guid: 317a5420356ca4e8f93c1db054499581, type: 2}

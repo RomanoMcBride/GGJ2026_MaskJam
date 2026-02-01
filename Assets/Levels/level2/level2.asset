@@ -15,5 +15,5 @@ MonoBehaviour:
   levelName: sir levlington the third
   levelID: 4c639e62-d146-47ac-bee3-77fa8f95fdd2
   levelFileName: level2
-  levelPreviewImage: {fileID: 0}
+  levelPreviewImage: {fileID: 21300000, guid: 000122eb43fc54ba1af806c35e41e890, type: 3}
   nextLevel: {fileID: 11400000, guid: ce800996ef5454d4ea423da7346c6b85, type: 2}

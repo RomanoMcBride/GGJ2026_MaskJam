@@ -72,7 +72,11 @@ public class GameStateManager : MonoBehaviour
 			    ChangeState(levelCompleted);
 			    break;
 		    case "gameOver":
-			    ChangeState(gameOver);
+			    if (currentState.menu != levelCompleted.menu)
+			    {
+				    ChangeState(gameOver);
+			    }
+
 			    break;
 		    default:
 			    Debug.LogWarning("unknown state. going to main menu");
@@ -84,7 +88,7 @@ public class GameStateManager : MonoBehaviour
     public void RestartLevel()
     {
 	    ChangeState(game);
-	    loadingManager.LoadLevel(LevelSelect.selectedLevel);
+	    loadingManager.LoadLevel(loadingManager.currentLevel);
     }
     
     public void LoadNextLevel()
