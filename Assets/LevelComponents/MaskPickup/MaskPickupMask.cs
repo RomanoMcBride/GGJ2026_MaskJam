@@ -2,12 +2,7 @@ using UnityEngine;
 
 public class MaskPickupMask : MonoBehaviour
 {
-	private MeshRenderer meshRenderer;
-	void Start()
-	{
-		meshRenderer = GetComponent<MeshRenderer>();
-	}
-	
+	public MeshRenderer meshRenderer;
 
 	public void SetColor(Color color)
 	{

@@ -4,11 +4,6 @@ using UnityEngine;
 public class MaskPickupBase : MonoBehaviour
 {
 	public MeshRenderer meshRenderer;
-    void Start()
-    {
-	    meshRenderer = GetComponent<MeshRenderer>();
-    }
-
     public void setFill(float fillValue)
     {
 	    Material[] materials = meshRenderer.materials;
