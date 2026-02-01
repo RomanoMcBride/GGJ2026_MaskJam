@@ -129,9 +129,17 @@
     {
         if (proportion < 0.15f)
         {
-            GameStateManager m =  FindFirstObjectByType<GameStateManager>();
-		    m.ChangeState("gameOver");
-            return;
+            try
+            {
+                GameStateManager m =  FindFirstObjectByType<GameStateManager>();
+		        m.ChangeState("gameOver");
+                return;
+            }
+            catch
+            {
+                Debug.Log("Game Over.");
+            }
+            
         }
         if (notBehindWall() && differentColor())
         {

@@ -41,6 +41,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7685712940100649934}
     m_Modifications:
+    - target: {fileID: 2095724030974744439, guid: bbf7829c514e409479a2cdd1fe07f618, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669079048706366022, guid: bbf7829c514e409479a2cdd1fe07f618, type: 3}
+      propertyPath: maskedPlayerAnimator
+      value: 
+      objectReference: {fileID: 1312450497297465226}
     - target: {fileID: 3167880269180805924, guid: bbf7829c514e409479a2cdd1fe07f618, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -94,6 +102,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbf7829c514e409479a2cdd1fe07f618, type: 3}
+--- !u!95 &1312450497297465226 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2095724030974744439, guid: bbf7829c514e409479a2cdd1fe07f618, type: 3}
+  m_PrefabInstance: {fileID: 1090789343796979965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7067990700109529289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7869423767788185652, guid: bbf7829c514e409479a2cdd1fe07f618, type: 3}
