@@ -39,7 +39,6 @@
                     agent.speed = wonderSpeed;
                     break;
                 case 1:
-                    NavMeshHit hit2;
                     targetDestination = player.transform.position + Vector3.Normalize(new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f))) * followRadius;
                     agent.speed = surprisedSpeed;
                     break;
