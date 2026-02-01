@@ -8,7 +8,7 @@
         public GameObject player;
         public float maxSight = 10f;
         private int state = 0;
-        public float followRadius = 20f;
+        public float followRadius = 10f;
         private Ray[] feildOfView;
         private float timeLeft = 0f;
 
@@ -22,20 +22,45 @@
 
     void FixedUpdate()
     {
-        if (state == 0 || state == 1)
-        {
-            timeLeft -= Time.fixedDeltaTime;
+        timeLeft -= Time.fixedDeltaTime;
             if (timeLeft <= 0)
-            {
+            {   
+                switch (state)
+                {
+                    case 0:
+                        NavMeshHit hit;
+                        Vector3 randomDirection = new Vector3(Random.Range(-25f, 25f), 0, Random.Range(-25f, 25f));
+                        NavMesh.SamplePosition(randomDirection, out hit, 100, NavMesh.AllAreas);
+                        targetDestination = hit.position;
+                        break;
+                    case 1:
+                        NavMeshHit hit2;
+                        NavMesh.SamplePosition(directedRandomWonder(), out hit2, 100, NavMesh.AllAreas);
+                        targetDestination = hit2.position;
+                        break;
+                        }
                 timeLeft = Random.Range(5f, 10f);
-                targetDestination = (state == 0) ? new Vector3(Random.Range(-100f, 100f), 0, Random.Range(-100f, 100f)) : directedRandomWonder();
+                state = (state > 0) ? state - 1 : 0;
             }
-        }
-        else
-        {
-            targetDestination = player.transform.position;
-        }
-        //agent.SetDestination(targetDestination);
+
+            switch (state)
+                {
+                    case 2:
+                        targetDestination = player.transform.position;
+                        break;
+                    case 3:
+                        break;
+                }
+
+            // print(  state);
+
+            //Set Animation Stuff Here
+
+
+
+
+
+        agent.SetDestination(targetDestination);
     }
 
     Vector3 directedRandomWonder()
@@ -51,35 +76,49 @@
 
     public bool notBehindWall()
     {
+        Vector3 direction = (player.transform.position - transform.position).normalized;
         RaycastHit hit;
-        Vector3 forwardDir = (transform.forward / transform.localScale.magnitude);
-        for(int deg = -50; deg <= 50; deg += 1){
-            Vector3 direction = Quaternion.Euler(0, deg, 0) * forwardDir;
-            if(Physics.Raycast(transform.position, direction, out hit, maxSight) && hit.collider.gameObject == player){
+        LayerMask mask = LayerMask.GetMask("ViewCone", "Agent");
+        if(Physics.Raycast(transform.position, direction, out hit, Vector3.Distance(transform.position, player.transform.position), ~mask))
+        {
+            Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
+            print(hit.collider.gameObject.name);
+            if(hit.collider.gameObject == player)
+            {
                 return true;
             }
         }
         return false;
     }
 
+    public bool differentColor()
+    {
+        Color agentColor = GetComponent<Renderer>().material.color;
+        Color playerColor = player.GetComponent<Renderer>().material.color;
+        return agentColor != playerColor;
+    }
+
     public void stopIdle(float proportion)
     {
-        print("Proportion: " + proportion);
         if (notBehindWall())
         {
-            if (proportion < 0.5f)
+            switch (proportion)
             {
-                state = 2;
-            }
-            else
-            {
-                state = 1;
+                case float p when (p > 0.85f):
+                    state = 1;
+                    break;
+                case float p when (p <= 0.85f && p >= 0.15f):
+                    state = 2;
+                    break;
+                case float p when (p < 0.15f):
+                    state = 3;
+                    break;
             }
         }
         else
         {
             state = 0;
         }
-        print("State: " + state);
     }
+    
 }
